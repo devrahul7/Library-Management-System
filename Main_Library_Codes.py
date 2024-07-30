@@ -299,7 +299,7 @@ def open_login_window():
             password_Entry.config(show="")
 
     a = IntVar()
-    Show_Password_Button1 = Checkbutton(login_window,bg="#8AAAE5", text="Show Password", variable=a, command=add, font="20")
+    Show_Password_Button1 = Checkbutton(login_window, text="Show Password", bg="#8AAAE5", variable=a, command=add, font="20")
     Show_Password_Button1.place(x=900, y=460)
        
 
@@ -790,7 +790,20 @@ def open_admin_dashboard():
     logout_button = Button(admin_dashboard, text="Log Out", fg="red", bg="white", font=("Arial", "15"), width=8, command=logout)
     logout_button.place(x=1050, y=450)
 
+    frame1 = Frame(admin_dashboard, bg="#7fa5e8", height=220, width=1600)
+    frame1.place(x=0, y=520)
+
+    Enquiry_ = Label(frame1, text="Enquiries:", font=("Arial", "15"), bg="#7fa5e8")
+    Enquiry_.place(x=15, y=523)
+
+    Email_id = Label(frame1, text="Email: bookwarica7@gmail.com", font=("Arial", "15"), bg="#7fa5e8")
+    Email_id.place(x=15, y=580)
+
+    Contact = Label(frame1, text="Contact: +977 9742869215", font=("Arial", "15"), bg="#7fa5e8")
+    Contact.place(x=15, y=610)
+
     admin_dashboard.state('zoomed')
+
 
 #=======================================================Window to work a payment methode=============
 
