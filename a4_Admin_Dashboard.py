@@ -38,8 +38,7 @@ def log_button():
     import a3_login
 logout_button = Button(lb,text="Log Out",fg="red",bg="white",font=("Arial","15"),width=8,command=log_button).place(x=1050,y=600)
 
+#codes
 lb.state('zoomed')  #zoomed full screen
 mainloop()
 
-
-#codde
