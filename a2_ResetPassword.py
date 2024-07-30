@@ -38,7 +38,7 @@ retype_Entry.place(x=400,y=350)
 
 def Confirm_fun():
     messagebox.showinfo("Library Management System", "Password Reset Succesfully")
-    lb.destroy()  # Close the current window
+    lb.destroy()  # Close the current windows
     import a3_login
   
 confirm_button = Button(lb,text="Confirm",fg="green",bg="white",font=("Arial","15"),width=8,command=Confirm_fun).place(x=500,y=600)
