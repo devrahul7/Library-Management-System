@@ -27,7 +27,7 @@ def show_message_box():
     messagebox.showinfo("Library Management System", "Marked Succesfully")
 Mark_as_Read = Button(text="Mark as Read",font=('Arial'),command=show_message_box)
 Mark_as_Read.place(x=350,y=500)
-#problemm in entry box
+
 def show_message_box2():
     messagebox.showinfo("Library Management System", "Exited")
 Button_Exit = Button(text="   Exit   ",font=('Arial'),command=show_message_box2)

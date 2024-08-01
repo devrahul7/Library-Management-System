@@ -30,11 +30,6 @@ def login_1():
     User_Entry.delete(0, END)
     password_Entry.delete(0, END)
 
-# canvas = Canvas( width=1000, height=100, bg="#220099")
-# canvas.pack(side=TOP)
-
-# rectangle = canvas.create_rectangle(50, 50, 250, 150, fill="#220099")
-
 
 library_photo  = Image.open("zbc.png")
 c=library_photo.resize((850,690))
@@ -118,14 +113,4 @@ Show_Password_Button1.place(x=900,y=460)
 lb.state('zoomed')
 
 mainloop()
-
-
-
-#sOME nOTES
-# lb.attributes('-alpha',0.2)  # ('-alpha' , 0 to 1) it used for making the windows trasparent and the value oof the transparency should be betn 0 to 1
-# lb.config(bg= "red")  #it is used for changing the background colour of the window
-# lb.maxsize(width= 400,height=500) #used for fixing the maximum size of the tk class
-# lb.minsize(width= 300,height=300) #used for fixing the minimum size of the tk class
-# photo = PhotoImage(file = "rs.png")
-# rs = Label(lb,image=photo,fg="green",height="900",width="900",anchor='w').place(x=100,y=15)
 

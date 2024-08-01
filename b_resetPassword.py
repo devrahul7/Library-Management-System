@@ -5,6 +5,11 @@ lb.title('Library Management System')
 lb.iconbitmap("l.ico")
 lb.geometry("700x700+100-100")
 
+colour1 = Label(text="      Library Management System                                                                                                                                                                                   Reset Password",font="(Helvetica,60)",anchor="w",bg="#6D7ACF",width=240,height=2)
+colour1.pack()
+colour2 = Label(bg="#6D7ACF",width=240,height=3)
+colour2.pack(side=BOTTOM)
+
 reset_password = Label(lb,text="Reset Your Password?",font=("Arial Black","40"),fg="blue",bg='#8AAAE5',width=50)
 reset_password.pack(padx=20,pady=95)
 
