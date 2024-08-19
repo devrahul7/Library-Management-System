@@ -1084,6 +1084,6 @@ def open_user_dashboard():
     
     Contact = Label(frame1, text="Contact: +977 9742869215", font=("Arial", 15), bg="#7fa5e8")
     Contact.place(x=15, y=90)
-#done
+#done_codes
 
 mainloop()
