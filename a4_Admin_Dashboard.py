@@ -42,4 +42,4 @@ lb.state('zoomed')  #zoomed full screen
 mainloop()
 
 
-#coddes
+#codde
