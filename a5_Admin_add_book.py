@@ -24,11 +24,10 @@ Entry_Book_Name = Entry(lb,width=15,font=('Arial 24'))
 Entry_Book_Name.place(x=350,y=110)
 
 
-ISBN_Label = Label(text="ISBN",bg="#8AAAE5",font=("Bold Arial","15"))
-ISBN_Label.place(x=230,y=180)
-
-ISBN_Label_Entry= Entry(lb,width=15,font=('Arial 24'))
-ISBN_Label_Entry.place(x=350,y=170)
+book_number_label = Label(text="Book Number",bg="#8AAAE5",font=("Bold Arial","15"))
+book_number_label.place(x=200,y=180)
+book_number_entry= Entry(lb,width=15,font=('Arial 24'))
+book_number_entry.place(x=350,y=170)
 
 Author_Label = Label(text="Author",bg="#8AAAE5",font=("Bold Arial","15"))
 Author_Label.place(x=220,y=240)
@@ -42,23 +41,48 @@ Date_Published.place(x=180,y=300)
 Date_Published_Entry = Entry(lb,width=15,font=('Arial 24'))
 Date_Published_Entry.place(x=350,y=290)
 
-Description_Name = Label(text="Description",bg="#8AAAE5",font=("Bold Arial","15"))
-Description_Name.place(x=200,y=350)
 
-#problemm in entry box
-Description_Entry = Entry(lb,width=15,font=('Arial 24'))
-Description_Entry.place(x=350,y=340)
-
-
-def show_message_box():
+def add_book_func():
     messagebox.showinfo("Library Management System", "Book Added Succesfully")
-Button_Add_Book = Button(text="Add Book",font=('Arial'),command=show_message_box)
-Button_Add_Book.place(x=350,y=500)
+    lb.destroy()
+    import a4_Admin_Dashboard
+Button_Add_Book = Button(text="Add Book",font=('Arial'),command=add_book_func)
+Button_Add_Book.place(x=150,y=600)
+
+def Update_func():
+    messagebox.showinfo("Library Management System", "Book Updated Succesfully")
+    lb.destroy()
+    import a4_Admin_Dashboard
+Button_update_Book = Button(text="Update Book",font=('Arial'),command=Update_func)
+Button_update_Book.place(x=300,y=600)
 
 
-def show_message_box2():
+def Retrieve_fun():
+    messagebox.showinfo("Library Management System", "Book Retrieved Succesfully")
+    lb.destroy()
+    import a4_Admin_Dashboard
+Button_Retrieve_Book = Button(text="Retrieve Book",font=('Arial'),command=Retrieve_fun)
+Button_Retrieve_Book.place(x=470,y=600)
+
+
+def del_func():
+    messagebox.showinfo("Library Management System", "Book Delete Succesfully")
+    lb.destroy()
+    import a4_Admin_Dashboard
+Button_Delete_Book = Button(text="Delete Book",font=('Arial'),command=del_func)
+Button_Delete_Book.place(x=650,y=600)
+
+
+
+
+def exitfunc():
     messagebox.showinfo("Library Management System", "Exited")
-Button_Exit = Button(text="   Exit   ",font=('Arial'),command=show_message_box2)
-Button_Exit.place(x=1100,y=500)        
+
+    lb.destroy()  # Close the current window
+    import a4_Admin_Dashboard
+
+Button_Exit = Button(text="   Exit   ",font=('Arial'),command=exitfunc)
+Button_Exit.place(x=1400,y=100)        
+
 
 mainloop()

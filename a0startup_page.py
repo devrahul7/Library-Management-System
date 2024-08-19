@@ -1,21 +1,23 @@
 from tkinter import *
 from PIL import Image,ImageTk
 from tkinter import messagebox
+
+
 lb =Tk()  #creating a blank window
 lb.title(" Library Management System ") #PROVIDING A TIITLE
 lb.iconbitmap("l.ico")
-lb.geometry("700x700+100-100") #here +100 or - 100 is used to replace window position
-lb.config(bg="#8AAAE5")  #DEFINING BG COLOUR OF THE WINDOW
+lb.geometry("700x700+100-100") 
+lb.config(bg="#8AAAE5")  
 lb.state("zoomed")
  
-colour1 = Label(text="    Library Management System                                                           Welcome to BookWarica Library",font="(Helvetica,60)",anchor="w",bg="#6D7ACF",width=240,height=2)
+colour1 = Label(text="    Library Management System    \t\t\t\t\t\t     Welcome to BookWarica Library",font="(Helvetica,60)",anchor="w",bg="#6D7ACF",width=240,height=2)
 colour1.pack()
-colour2 = Label(bg="#6D7ACF",width=240,height=3)   #used for providing the colouring to the top and bottom side
+colour2 = Label(bg="#6D7ACF",width=240,height=3)   
 colour2.pack(side=BOTTOM)
 
 library_photo  = Image.open("y.png")
 c=library_photo.resize((300,250))
-r = ImageTk.PhotoImage(c)                #IMPORTING IMAGE
+r = ImageTk.PhotoImage(c)       
 image1=Label(image=r,bg="#8AAAE5").pack()
 
 
@@ -34,8 +36,7 @@ label1.place(x=440,y=245)
 yet_name = Label(text="Dont have a account yet?",font=("Arial Bold","15"),fg="black",bg="#4285F4")
 yet_name.place(x=450,y=258)
 
-sign_up_button = Button(text="Sign up",font=("Arial Bold","10"),fg="black",bg="#4285F4")
-sign_up_button.place(x=1050,y=258)
+
 introduction_label = Label(text="Introduction",font=("Arial Bold","20"),fg="#CC0000",bg="#8AAAE5")
 introduction_label.place(x=700,y=320)
 
@@ -46,11 +47,22 @@ intRo_text.place(x=440,y=360)
 intRo_text2 =  Label(text="Nothing is pleasanter than exploring a library \n So for exploring more click Sign up/Sign in ",font=("Arial","15"),fg="black",bg="#8AAAE5")
 intRo_text2.place(x=600,y=450)
 
+def open_login_window1():
+    lb.destroy() 
+    import a1_signup
 
-btn_Sign_up = Button(text="Sign in",font=("Arial","15"),bg="#6D7ACF")
-btn_Sign_up.place(x=1520,y=80,anchor="e")
+sign_up_button = Button(text="Sign up",font=("Arial Bold","10"),fg="black",bg="#4285F4",command=open_login_window1)
+sign_up_button.place(x=1050,y=258)
+
+def open_login_window():
+    lb.destroy()  
+    import a3_login
+
+btn_Sign_in = Button(text="Sign in",font=("Arial","15"),bg="#6D7ACF",command=open_login_window)
+btn_Sign_in.place(x=1520,y=80,anchor="e")
 
 Bottom_text = Label(text="BookWarica  LiBrarY",font=("Arial Bold","15"),fg="black",bg="#6D7ACF")
 Bottom_text.place(x=680,y=750)
-
 mainloop()
+
+
