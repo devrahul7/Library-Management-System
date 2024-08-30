@@ -11,7 +11,7 @@ admin.place(x=900,y=150)
 
 library_photo  = Image.open("zbc.png")
 c=library_photo.resize((850,690))
-r = ImageTk.PhotoImage(c)                #IMPORTING IMAGE
+r = ImageTk.PhotoImage(c)                #IMPORTING IMAGEs
 image1=Label(image=r).place(x=0,y=50)
 
 
